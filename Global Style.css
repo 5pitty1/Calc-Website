@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+}
+
+#titlebar {
+    background-color: lightskyblue;
+    height: 60px;
+    width: 100vw;
+
+}
+
+#home-button {
+    text-decoration: none;
+}
+
+#home-text {
+    display: table-cell;
+    text-align: center;
+    height: 60px;
+    top: 30px;
+    width: 100vw;
+    vertical-align: middle;
+    font-size: 25px
+
+}
+
+#home-text span {
+    font-family: Tahoma;
+
+}
