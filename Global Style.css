@@ -37,7 +37,7 @@ time, mark, audio, video {
 /*---------------------------------------Header-----------------------------------------*/
 /*--------------------------------------------------------------------------------------*/
 
-header {
+.wrapper > header {
     width: 100vw;
     height: 50px;
     margin-top: -50px;
@@ -45,7 +45,7 @@ header {
     font-family: "Droid Sans", sans-serif;
 }
 
-header nav {
+.wrapper > header > nav {
     height: 50px;
     display: flex;
     flex-wrap: nowrap;
@@ -56,20 +56,98 @@ header nav {
     justify-content: center;
 }
 
-header nav section {
+.wrapper > header > nav > section {
     flex: 1 1 400px;
 }
 
-#chalceias {
+#calcvision {
     text-decoration: none;
-    color: #0d3b69;
+    color: #0d4f86;
     font-size: 25px;
 
 }
 
 #topics {
     text-align: center;
+}
+
+#topicsbtn {
+    background-color: white;
+    color: black;
     font-size: 15px;
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    border: none;
+    font-family: "Droid Sans", sans-serif;
+}
+
+#topicsbtn:hover {
+    background-color: #f3f3f3;
+    color: #006596;
+    outline:none;
+}
+#topicsbtn:focus {
+    outline:none;
+}
+
+.dropdown-content {
+    position: absolute;
+    display: none;
+    border-top: 1px #d3d5d7 solid ;
+    border-bottom: 1px #d3d5d7 solid ;
+    width: 100vw;
+    background-color: #f3f3f3;
+    left: 0;
+    z-index: 10;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.dropdown-content ul, .dropdown-content li {
+    list-style: none;
+}
+
+.dropdown-content > ul {
+    display: flex;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 20px 20px 22px;
+}
+
+.dropdown-content > ul > li {
+    flex-grow:1;
+    text-align: center;
+    margin-bottom: 26px !important;
+}
+
+.dropdown-content header {
+    color: #007d96;
+    font-family:inherit;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 2.5;
+}
+
+.dropdown-content ul li ul a {
+    color: #007d96 !important;
+    font-family: inherit !important;
+    font-size: 15px !important;
+    line-height: 2.5 !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    width: 100% !important;
+}
+
+.dropdown-content ul li ul a:hover {
+    color: #00b5dc !important;
+    text-decoration: underline;
+}
+
+#differentialCalc, #integralCalc {
+    border-right: 1px #d3d5d7 solid ;
 }
 
 #searchBoxContainer {
@@ -81,6 +159,10 @@ header nav section {
     font-size: 20px;
     float: right;
     border: none;
+    height: 48px;
+    background-color: #f6f6f6;
+    padding-left: 20px;
+    color: #5e5e5e;
 }
 
 #searchBox:focus {
