@@ -57,7 +57,7 @@ time, mark, audio, video {
 }
 
 .wrapper > header > nav > section {
-    flex: 1 1 400px;
+    flex: 1 1;
 }
 
 #calcvision {
@@ -207,4 +207,50 @@ footer {
     border-top: 1px #f0f0f0 solid;
     height: 48px;
     margin-bottom: -50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+footer > div {
+    flex: 1 1;
+    height: 48px;
+}
+
+#movement {
+    text-align: center;
+}
+
+#movement button, #movement > div {
+    display: inline-block;
+}
+
+#movement button {
+    height: 48px;
+    width: 48px;
+    background: transparent;
+    color: #0d4f86;
+    border: none;
+}
+
+#movement div {
+    font-family: "Droid Sans", sans-serif;
+    font-size: 20px;
+}
+
+#resources button {
+    float: right;
+    height: 48px;
+    font-family: "Droid Sans", sans-serif;
+    font-size: 26px;
+    width: 300px;
+    border:none;
+    text-align: center;
+    background-color: #e8e8e8;
+    color: #5c5c5c;
+    cursor: pointer;
+}
+
+#resources button:focus {
+    outline:none;
 }
