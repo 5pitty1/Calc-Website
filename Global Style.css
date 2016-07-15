@@ -218,11 +218,11 @@ footer > div {
 }
 
 #movement {
-    text-align: center;
-}
-
-#movement button, #movement > div {
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
 }
 
 #movement button {
@@ -231,6 +231,15 @@ footer > div {
     background: transparent;
     color: #0d4f86;
     border: none;
+    cursor: pointer;
+}
+
+#movement button:focus {
+    outline: none;
+}
+
+#movement button:hover {
+    color: #1582de;
 }
 
 #movement div {
@@ -243,7 +252,7 @@ footer > div {
     height: 48px;
     font-family: "Droid Sans", sans-serif;
     font-size: 26px;
-    width: 300px;
+    width: 20vw;
     border:none;
     text-align: center;
     background-color: #e8e8e8;
