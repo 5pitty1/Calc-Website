@@ -9,7 +9,7 @@ a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
-dl, dt, dd, ol, ul, li,
+dl, dt, dd, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
@@ -155,14 +155,43 @@ time, mark, audio, video {
     vertical-align: middle;
 }
 
+#searchBtn {
+    float: right;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    color: #4884a0;
+    cursor: pointer;
+}
+
+#searchBtn:focus {
+    outline: none;
+}
+
 #searchBox {
-    font-size: 20px;
+    font-size: 18px;
     float: right;
     border: none;
-    height: 48px;
-    background-color: #f6f6f6;
-    padding-left: 20px;
-    color: #5e5e5e;
+    width: 200px;
+    background-color: transparent;
+    padding-left: 5px;
+    color: #4884a0;
+}
+
+#searchBox::-webkit-input-placeholder {
+    color: #8bb5d1;
+}
+
+#searchBox:-moz-placeholder { /* Firefox 18- */
+    color: #417992;
+}
+
+#searchBox::-moz-placeholder {  /* Firefox 19+ */
+    color: #417992;
+}
+
+#searchBox:-ms-input-placeholder {
+    color: #417992;
 }
 
 #searchBox:focus {
@@ -174,9 +203,55 @@ time, mark, audio, video {
 /*--------------------------------------------------------------------------------------*/
 
 #sideBar {
-    background: rgb(232, 232, 232);
+    background-color: #ededed;
     height:100%;
-    width: 20vw;;
+    width: 400px;
+    overflow: auto;
+
+}
+
+#sideBarTitle {
+    padding: 40px 20px 30px 20px;
+    font-size: 30px;
+}
+
+#sideBarDescription {
+    padding: 0 1vw;
+    margin-bottom: 20px;
+    font-size: .9rem;
+}
+
+#sideBarTopics {
+    border-top: 1px solid #d5d5d5;
+}
+
+#sideBarTopics > div {
+    padding: 0 20px;
+    font-size: .9rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+}
+
+#sideBarTopics a {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    height: 2.5rem;
+    text-decoration: none;
+    color: black;
+
+}
+
+#sideBarTopics i {
+}
+
+#sideBarTopics a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#sideBarTopics a.active {
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 /*--------------------------------------------------------------------------------------*/
@@ -212,9 +287,36 @@ footer {
     align-items: center;
 }
 
-footer > div {
+footer > section {
     flex: 1 1;
     height: 48px;
+}
+
+#menu {
+    font-family: "Droid Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+}
+
+#menu a {
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: #0d4f86;
+    width: auto;
+
+}
+
+#menu a:hover {
+    color: #1582de;
+}
+
+#menuBtn {
+    padding: 0 1vw;
+
 }
 
 #movement {
@@ -262,4 +364,19 @@ footer > div {
 
 #resources button:focus {
     outline:none;
+}
+
+#resContainer {
+    position: absolute;
+    display: none;
+    width: 20vw;
+    height: 500px;
+    background-color: #f3f3f3;
+    right: 0;
+    bottom: 49px;
+    z-index: 10;
+}
+
+#resContainer.show {
+    display: block;
 }

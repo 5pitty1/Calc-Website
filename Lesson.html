@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Definition of a Limit</title>
+    <title>Limits and Derivatives</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
     <script src="https://use.fontawesome.com/9cc60c64ee.js"></script>
@@ -38,6 +38,7 @@
                                 <li><a href="#">Applications of Differentiation</a></li>
                                 <li><a href="#">Integrals</a></li>
                                 <li><a href="#">Applications of Integration</a></li>
+                                <li><a href="#">Derivatives and Limits Review</a></li>
                             </ul>
                         </li>
                         <li id="integralCalc">
@@ -48,6 +49,7 @@
                                 <li><a href="#">Differential Equations</a></li>
                                 <li><a href="#">Parametric Equations and Polar Coordinates</a></li>
                                 <li><a href="#">Infinite Sequence and Series</a></li>
+                                <li><a href="#"></a></li>
                             </ul>
                         </li>
                         <li id="multivariableCalc">
@@ -66,30 +68,81 @@
             </section>
             <section>
                 <form id="searchBoxContainer">
+                    <button id="searchBtn"><i class="fa fa-search"></i></button>
                     <input type="text" id="searchBox" placeholder="Search" autocomplete="off">
                 </form>
             </section>
         </nav>
     </header>
     <div id="container">
-        <div id="sideBar"></div>
+        <div id="sideBar">
+            <div id="sideBarTitle">Limits and Derivatives</div>
+            <div id="sideBarDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec turpis tellus,
+                tristique ac nisi ut, viverra ultrices lectus. Maecenas neque ipsum, placerat vestibulum volutpat at,
+                ultricies eget ipsum.</div>
+            <section id="sideBarTopics">
+                <div>Exercises</div>
+                <a href="#">
+                    <span>1.</span>
+                    <span>The Tangent and Velocity Problems</span>
+                </a>
+                <a class="active" href="#">
+                    <span>2.</span>
+                    <span>The Limit of a Function</span>
+                </a>
+                <a href="#">
+                    <span>3.</span>
+                    <span>Calculating Limits Using the Limit Laws</span>
+                </a>
+                <a href="#">
+                    <span>4.</span>
+                    <span>The Precise Definition of a Limit</span>
+                </a>
+                <a href="#">
+                    <span>5.</span>
+                    <span>Continuity</span>
+                </a>
+                <a href="#">
+                    <span>6.</span>
+                    <span>Limits at Infinity; Horizontal Asymptotes</span>
+                </a>
+                <a href="#">
+                    <span>7.</span>
+                    <span>Derivatives and Rates of Change</span>
+                </a>
+                <a href="#">
+                    <span>8.</span>
+                    <span>The Derivative as a Function</span>
+                </a>
+                <a href="#">
+                    <span>9.</span>
+                    <span>Review</span>
+                </a>
+            </section>
+        </div>
     </div>
     <footer>
-        <div>
-
-        </div>
-        <div>
+        <section>
+            <div id="menu">
+                <a href="#">
+                    <div id="menuBtn" class="fa fa-bars fa-lg"></div>
+                    <div>2.Limits and Derivatives</div>
+                </a>
+            </div>
+        </section>
+        <section>
             <div id="movement">
                 <button><i class="fa fa-angle-left fa-3x"></i></button>
-                <div>Limits and Derivatives</div>
+                <div>The Limit of a Function</div>
                 <button><i class="fa fa-angle-right fa-3x"></i></button>
             </div>
-        </div>
-        <div>
+        </section>
+        <section>
             <div id="resources">
-                <button>Resources</button>
+                <button id="resBtn" onclick="openResources()">Resources</button>
             </div>
-        </div>
+            <div id="resContainer"></div>
+        </section>
     </footer>
 </div>
 </body>
