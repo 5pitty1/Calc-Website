@@ -71,7 +71,7 @@ time, mark, audio, video {
     text-align: center;
 }
 
-#topicsbtn {
+#topicsBtn {
     background-color: white;
     color: black;
     font-size: 15px;
@@ -82,48 +82,49 @@ time, mark, audio, video {
     font-family: "Droid Sans", sans-serif;
 }
 
-#topicsbtn:hover {
+#topicsBtn:hover {
     background-color: #f3f3f3;
     color: #006596;
     outline:none;
 }
-#topicsbtn:focus {
+#topicsBtn:focus {
     outline:none;
 }
 
-.dropdown-content {
+#topicsContainer {
     position: absolute;
-    display: none;
     border-top: 1px #d3d5d7 solid ;
     border-bottom: 1px #d3d5d7 solid ;
     width: 100vw;
     background-color: #f3f3f3;
     left: 0;
-    z-index: 10;
+    display: none;
+
 }
 
-.dropdown-content.show {
+#topicsContainer.show {
     display: block;
+
 }
 
-.dropdown-content ul, .dropdown-content li {
+#topicsContainer ul, #topicsContainer li {
     list-style: none;
 }
 
-.dropdown-content > ul {
+#topicsContainer > ul {
     display: flex;
     max-width: 900px;
     margin: 0 auto;
     padding: 32px 20px 20px 22px;
 }
 
-.dropdown-content > ul > li {
+#topicsContainer > ul > li {
     flex-grow:1;
     text-align: center;
     margin-bottom: 26px !important;
 }
 
-.dropdown-content header {
+#topicsContainer header {
     color: #007d96;
     font-family:inherit;
     font-size: 16px;
@@ -131,7 +132,7 @@ time, mark, audio, video {
     line-height: 2.5;
 }
 
-.dropdown-content ul li ul a {
+#topicsContainer ul li ul a {
     color: #007d96 !important;
     font-family: inherit !important;
     font-size: 15px !important;
@@ -141,7 +142,7 @@ time, mark, audio, video {
     width: 100% !important;
 }
 
-.dropdown-content ul li ul a:hover {
+#topicsContainer ul li ul a:hover {
     color: #00b5dc !important;
     text-decoration: underline;
 }
@@ -203,20 +204,24 @@ time, mark, audio, video {
 /*--------------------------------------------------------------------------------------*/
 
 #sideBar {
+    position: absolute;
+    left: 0;
     background-color: #ededed;
-    height:100%;
+    height: calc(100vh - 100px);
     width: 400px;
     overflow: auto;
+    z-index: 5;
 
 }
 
 #sideBarTitle {
     padding: 40px 20px 30px 20px;
     font-size: 30px;
+    color: #235270;
 }
 
 #sideBarDescription {
-    padding: 0 1vw;
+    padding: 0 40px 0 20px;
     margin-bottom: 20px;
     font-size: .9rem;
 }
@@ -243,6 +248,10 @@ time, mark, audio, video {
 
 }
 
+#sideBarTopics a span:first-child {
+    padding-right: 8px;
+}
+
 #sideBarTopics i {
 }
 
@@ -258,7 +267,6 @@ time, mark, audio, video {
 /*--------------------------------------Tutorial Area-----------------------------------*/
 /*--------------------------------------------------------------------------------------*/
 
-
 #container {
     font-family: "Droid Sans", sans-serif;
     height:100%;
@@ -266,11 +274,12 @@ time, mark, audio, video {
     flex-direction: row;
 }
 
-#hi {
-    width: 80vw;
-    padding-top: 100px;
-    font-size: 60px;
-    text-align: center;
+#shade {
+    position: absolute;
+    background-color: rgba(0, 0, 0, .3);
+    width: 100vw;
+    height: calc(100vh - 100px);
+    z-index: 2;
 }
 
 /*--------------------------------------------------------------------------------------*/
@@ -284,29 +293,27 @@ footer {
     margin-bottom: -50px;
     display: flex;
     flex-direction: row;
-    align-items: center;
 }
 
 footer > section {
     flex: 1 1;
-    height: 48px;
+
 }
 
 #menu {
+    float: left;
     font-family: "Droid Sans", sans-serif;
     display: flex;
     flex-direction: column;
-    width: 20vw;
 }
 
 #menu a {
     height: 48px;
     display: flex;
-    flex-direction: row;
     align-items: center;
+    flex-direction: row;
     text-decoration: none;
     color: #0d4f86;
-    width: auto;
 
 }
 
@@ -315,7 +322,7 @@ footer > section {
 }
 
 #menuBtn {
-    padding: 0 1vw;
+    padding: 0 20px;
 
 }
 
@@ -349,22 +356,34 @@ footer > section {
     font-size: 20px;
 }
 
-#resources button {
+#resources {
     float: right;
-    height: 48px;
     font-family: "Droid Sans", sans-serif;
-    font-size: 26px;
-    width: 20vw;
-    border:none;
-    text-align: center;
-    background-color: #e8e8e8;
-    color: #5c5c5c;
-    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
 }
 
-#resources button:focus {
-    outline:none;
+#resources a {
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: #0d4f86;
+    width: auto;
+
 }
+
+#resources a:hover {
+    color: #1582de;
+}
+
+#resIcon {
+    padding: 0 20px;
+    margin-top: 3px;
+}
+
 
 #resContainer {
     position: absolute;

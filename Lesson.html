@@ -3,67 +3,77 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Limits and Derivatives</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+    <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
     <script src="https://use.fontawesome.com/9cc60c64ee.js"></script>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="mathquill-0.10.1/mathquill.css"/>
+
+    <!-- MathQuill -->
     <script src="mathquill-0.10.1/mathquill.js"></script>
     <script>
         var MQ = MathQuill.getInterface(2);
     </script>
+
+    <!-- Personal -->
+    <link rel="stylesheet" href="mathquill-0.10.1/mathquill.css"/>
     <link href="Global%20Style.css" rel="stylesheet" type="text/css"/>
     <script src="Global%20Script.js" type="text/javascript"></script>
 </head>
 <body>
 <div class="wrapper">
+    <div id="empty"></div>
     <header>
         <nav>
             <section>
-                <a id="calcvision" href=""><span style="font-weight: bold">Calc</span>Vision</a>
+                <a id="calcvision" href="#"><span style="font-weight: bold">Calc</span>Vision</a>
             </section>
             <section>
-                <div id="topics">
-                    <button id="topicsbtn" onclick="openTopics()">Topics <i class="fa fa-angle-down fa-lg" aria-hidden="true"></i></button>
-                </div>
-                <div id="topicsContainer" class="dropdown-content">
-                    <ul>
-                        <li id="differentialCalc">
-                            <header>Differential Calculus</header>
-                            <ul>
-                                <li><a href="#">Functions and Models</a></li>
-                                <li><a href="#">Limits and Derivatives</a></li>
-                                <li><a href="#">Differentiation Rules</a></li>
-                                <li><a href="#">Applications of Differentiation</a></li>
-                                <li><a href="#">Integrals</a></li>
-                                <li><a href="#">Applications of Integration</a></li>
-                                <li><a href="#">Derivatives and Limits Review</a></li>
-                            </ul>
-                        </li>
-                        <li id="integralCalc">
-                            <header>Integral Calculus</header>
-                            <ul>
-                                <li><a href="#">Techniques of Integration</a></li>
-                                <li><a href="#">Further Applications of Integration</a></li>
-                                <li><a href="#">Differential Equations</a></li>
-                                <li><a href="#">Parametric Equations and Polar Coordinates</a></li>
-                                <li><a href="#">Infinite Sequence and Series</a></li>
-                                <li><a href="#"></a></li>
-                            </ul>
-                        </li>
-                        <li id="multivariableCalc">
-                            <header>Multivariable Calculus</header>
-                            <ul>
-                                <li><a href="#">Vectors and the Geometry of Space</a></li>
-                                <li><a href="#">Vector Functions</a></li>
-                                <li><a href="#">Partial Derivatives</a></li>
-                                <li><a href="#">Multiple Integrals</a></li>
-                                <li><a href="#">Vector Calculus</a></li>
-                                <li><a href="#">Second-Order Differential Equations</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                <div class="dropdown" id="topics">
+                    <button id="topicsBtn" onclick="showTopics()">Topics <i class="fa fa-angle-down fa-lg" aria-hidden="true"></i></button>
+                    <div id="topicsContainer">
+                        <ul>
+                            <li id="differentialCalc">
+                                <header>Differential Calculus</header>
+                                <ul>
+                                    <li><a href="#">Functions and Models</a></li>
+                                    <li><a href="#">Limits and Derivatives</a></li>
+                                    <li><a href="#">Differentiation Rules</a></li>
+                                    <li><a href="#">Applications of Differentiation</a></li>
+                                    <li><a href="#">Integrals</a></li>
+                                    <li><a href="#">Applications of Integration</a></li>
+                                    <li><a href="#">Derivatives and Limits Review</a></li>
+                                </ul>
+                            </li>
+                            <li id="integralCalc">
+                                <header>Integral Calculus</header>
+                                <ul>
+                                    <li><a href="#">Techniques of Integration</a></li>
+                                    <li><a href="#">Further Applications of Integration</a></li>
+                                    <li><a href="#">Differential Equations</a></li>
+                                    <li><a href="#">Parametric Equations and Polar Coordinates</a></li>
+                                    <li><a href="#">Infinite Sequence and Series</a></li>
+                                    <li><a href="#"></a></li>
+                                </ul>
+                            </li>
+                            <li id="multivariableCalc">
+                                <header>Multivariable Calculus</header>
+                                <ul>
+                                    <li><a href="#">Vectors and the Geometry of Space</a></li>
+                                    <li><a href="#">Vector Functions</a></li>
+                                    <li><a href="#">Partial Derivatives</a></li>
+                                    <li><a href="#">Multiple Integrals</a></li>
+                                    <li><a href="#">Vector Calculus</a></li>
+                                    <li><a href="#">Second-Order Differential Equations</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
             </section>
             <section>
@@ -75,7 +85,8 @@
         </nav>
     </header>
     <div id="container">
-        <div id="sideBar">
+        <div id="shade" hidden></div>
+        <div id="sideBar" hidden>
             <div id="sideBarTitle">Limits and Derivatives</div>
             <div id="sideBarDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec turpis tellus,
                 tristique ac nisi ut, viverra ultrices lectus. Maecenas neque ipsum, placerat vestibulum volutpat at,
@@ -119,6 +130,9 @@
                     <span>Review</span>
                 </a>
             </section>
+
+        </div>
+        <div id="tutorial">
         </div>
     </div>
     <footer>
@@ -126,7 +140,7 @@
             <div id="menu">
                 <a href="#">
                     <div id="menuBtn" class="fa fa-bars fa-lg"></div>
-                    <div>2.Limits and Derivatives</div>
+                    <div>Limits and Derivatives</div>
                 </a>
             </div>
         </section>
@@ -139,9 +153,12 @@
         </section>
         <section>
             <div id="resources">
-                <button id="resBtn" onclick="openResources()">Resources</button>
+                <a href="#">
+                    <div>Resources</div>
+                    <div id="resIcon" class="fa fa-tasks"></div>
+                </a>
+                <div id="resContainer">Hello</div>
             </div>
-            <div id="resContainer"></div>
         </section>
     </footer>
 </div>
