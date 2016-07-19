@@ -99,6 +99,7 @@ time, mark, audio, video {
     background-color: #f3f3f3;
     left: 0;
     display: none;
+    z-index: 10;
 
 }
 
@@ -203,6 +204,14 @@ time, mark, audio, video {
 /*-----------------------------------------Sidebar--------------------------------------*/
 /*--------------------------------------------------------------------------------------*/
 
+#shade {
+    position: absolute;
+    background-color: rgba(0, 0, 0, .3);
+    width: 100vw;
+    height: calc(100vh - 100px);
+    z-index: 2;
+}
+
 #sideBar {
     position: absolute;
     left: 0;
@@ -274,12 +283,44 @@ time, mark, audio, video {
     flex-direction: row;
 }
 
-#shade {
-    position: absolute;
-    background-color: rgba(0, 0, 0, .3);
+#tutorial {
+    display: flex;
+    flex-direction: row;
     width: 100vw;
-    height: calc(100vh - 100px);
+    padding: 0 10vw;
+}
+
+#left {
+    background-color: red;
+    position: absolute;
+    top: 51px;
+    left: 0;
+    bottom: 49px;
+    right: 50%;
+    z-index: 1;
+
+}
+
+#resizeBar {
+    position: absolute;
+    width:4px;
+    top: 51px;
+    right: 50%;
+    bottom: 49px;
+    background-color: purple;
+    cursor: ew-resize;
     z-index: 2;
+}
+
+#right {
+    background-color: blue;
+    position: absolute;
+    top: 51px;
+    left: 50%;
+    bottom: 49px;
+    right: 0;
+    z-index: 1;
+
 }
 
 /*--------------------------------------------------------------------------------------*/
@@ -364,7 +405,7 @@ footer > section {
     font-size: 20px;
 }
 
-#resources a {
+#resources > a {
     height: 48px;
     display: flex;
     flex-direction: row;
@@ -388,14 +429,31 @@ footer > section {
 #resContainer {
     position: absolute;
     display: none;
-    width: 20vw;
-    height: 500px;
+    width: 300px;
+    height: auto;
     background-color: #f3f3f3;
     right: 0;
     bottom: 49px;
     z-index: 10;
+    text-align: center;
+    padding-top:20px;
+    padding-bottom: 20px;
+
 }
 
 #resContainer.show {
     display: block;
+}
+
+#resContainer a {
+    display: block;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#resContainer a:hover {
+    background-color: #e1e1e1;
 }

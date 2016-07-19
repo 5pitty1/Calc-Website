@@ -9,5 +9,6 @@
     <orderEntry type="library" name="9cc60c64ee" level="application" />
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="jquery" level="application" />
+    <orderEntry type="library" name="jqueryui-DefinitelyTyped" level="application" />
   </component>
 </module>
