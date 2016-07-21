@@ -60,11 +60,15 @@ time, mark, audio, video {
     flex: 1 1;
 }
 
-#calcvision {
+#calcVision {
     text-decoration: none;
     color: #0d4f86;
     font-size: 25px;
 
+}
+
+#calcVision:hover {
+    color: #157fd7;
 }
 
 #topics {
@@ -382,7 +386,8 @@ footer > section {
     justify-content: center;
 }
 
-#movement button {
+#movement a {
+    text-align: center;
     height: 48px;
     width: 48px;
     background: transparent;
@@ -391,11 +396,11 @@ footer > section {
     cursor: pointer;
 }
 
-#movement button:focus {
+#movement a:focus {
     outline: none;
 }
 
-#movement button:hover {
+#movement a:hover {
     color: #1582de;
 }
 
