@@ -14,7 +14,7 @@ $(document).ready(function () {
         refreshPositions: true,
         drag: function () {
             var offset = $(this).offset();
-            var xPos = offset.left;
+            var xPos = offset.left + 4;
             $("#right").css({
                 "left": xPos
             });
@@ -27,13 +27,13 @@ $(document).ready(function () {
             var offset = $(this).offset();
             var xPos = offset.left;
             $("#right").css({
-                "left": (xPos / $(document).width())*100 + "%"
+                "left": ((xPos + 4) / $(document).width())*100 + "%"
             });
             $("#left").css({
-                "right": (1 - (xPos / $(document).width()))*100 + "%"
+                "right": (1 - ((xPos + 4) / $(document).width()))*100 + "%"
             });
             $(this).css({
-                "left": (xPos / $(document).width())*100 + "%"
+                "left": ((xPos) / $(document).width())*100 + "%"
             })
 
         }

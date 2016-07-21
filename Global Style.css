@@ -96,7 +96,7 @@ time, mark, audio, video {
     border-top: 1px #d3d5d7 solid ;
     border-bottom: 1px #d3d5d7 solid ;
     width: 100vw;
-    background-color: #f3f3f3;
+    background-color: #f5f5f5;
     left: 0;
     display: none;
     z-index: 10;
@@ -209,7 +209,7 @@ time, mark, audio, video {
     background-color: rgba(0, 0, 0, .3);
     width: 100vw;
     height: calc(100vh - 100px);
-    z-index: 2;
+    z-index: 3;
 }
 
 #sideBar {
@@ -291,32 +291,39 @@ time, mark, audio, video {
 }
 
 #left {
-    background-color: red;
+    background-color: #f8f8f8;
     position: absolute;
     top: 51px;
     left: 0;
     bottom: 49px;
-    right: 50%;
+    right: 70%;
     z-index: 1;
 
 }
 
 #resizeBar {
     position: absolute;
-    width:4px;
+    width: 8px;
     top: 51px;
-    right: 50%;
+    right: calc(70% - 4px);
     bottom: 49px;
-    background-color: purple;
+    background-color: transparent;
     cursor: ew-resize;
     z-index: 2;
 }
 
+#resizeBarLine {
+    background-color: #f0f0f0;
+    width: 2px;
+    height: 100%;
+    margin: 0 auto;
+}
+
 #right {
-    background-color: blue;
+    background-color: white;
     position: absolute;
     top: 51px;
-    left: 50%;
+    left: 30%;
     bottom: 49px;
     right: 0;
     z-index: 1;
