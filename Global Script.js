@@ -39,6 +39,10 @@ $(document).ready(function () {
         }
     });
 
+    $("#searchBtn").click(function () {
+        
+    });
+
 });
 
 function showTopics() {

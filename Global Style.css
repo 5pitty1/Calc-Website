@@ -56,6 +56,57 @@ time, mark, audio, video {
     justify-content: center;
 }
 
+#searchHead {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 50px;
+    border-bottom: 1px #f0f0f0 solid;
+    font-family: "Droid Sans", sans-serif;
+}
+
+#searchBar {
+    position: relative;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    background-color: white;
+
+}
+
+#searchIcon {
+    position: absolute;
+    top: auto;
+    display: flex;
+    align-items: center;
+    left: calc(100% - 16.72px);
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    color: #4884a0;
+    cursor: pointer;
+    padding: 0;
+    transition: left 1s ease-out;
+}
+
+#searchIcon:active {
+    left: 0;
+}
+
+#search {
+    border: none;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+#search:focus {
+    outline: none;
+}
+
 .wrapper > header > nav > section {
     flex: 1 1;
 }
@@ -168,6 +219,7 @@ time, mark, audio, video {
     font-size: 18px;
     color: #4884a0;
     cursor: pointer;
+    padding: 0;
 }
 
 #searchBtn:focus {
@@ -407,6 +459,7 @@ footer > section {
 #movement div {
     font-family: "Droid Sans", sans-serif;
     font-size: 20px;
+    text-align: center;
 }
 
 #resources {
