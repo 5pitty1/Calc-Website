@@ -1,8 +1,8 @@
 $(document).ready(function () {
 
-    $("#menu, #shade").click(function () {
+    $("#menu, #sideShade").click(function () {
         $("#sideBar").toggle("slide", 250);
-        $("#shade").toggle("fade", 250);
+        $("#sideShade").toggle("fade", 250);
     });
     $("#resBtn").click(function () {
         $("#resContainer").toggleClass("show");
@@ -40,7 +40,23 @@ $(document).ready(function () {
     });
 
     $("#searchBtn").click(function () {
-        
+        $("#searchHead").addClass("enter");
+        $("#searchShade").toggle("fade", 500);
+        $("#mainHead").addClass("leave");
+        $("#search").focus();
+    });
+
+    $("#searchIcon").click(function() {
+        $("#search").focus();
+    });
+
+    $("#closeSearch, #searchShade").click(function () {
+        $("#searchHead").removeClass("enter");
+        $("#searchShade").toggle("fade", 500);
+        $("#mainHead").removeClass("leave");
+        setTimeout(function() {
+            $("#search").val("");
+        }, 250);
     });
 
 });

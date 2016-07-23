@@ -45,69 +45,33 @@ time, mark, audio, video {
     font-family: "Droid Sans", sans-serif;
 }
 
-.wrapper > header > nav {
-    height: 50px;
-    display: flex;
-    flex-wrap: nowrap;
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 0 20px;
-    align-items: center;
-    justify-content: center;
-}
-
-#searchHead {
+#mainHead {
     position: absolute;
     top: 0;
     width: 100vw;
     height: 50px;
-    border-bottom: 1px #f0f0f0 solid;
     font-family: "Droid Sans", sans-serif;
+    transition: top .25s ease-out;
+
 }
 
-#searchBar {
+#mainHead.leave {
+    top: 50px;
+}
+
+#mainBar {
     position: relative;
-    height: 50px;
     display: flex;
     align-items: center;
+    justify-content: center;
     max-width: 1200px;
+    padding: 0 20px;
     margin: 0 auto;
-    width: 100%;
     background-color: white;
 
 }
 
-#searchIcon {
-    position: absolute;
-    top: auto;
-    display: flex;
-    align-items: center;
-    left: calc(100% - 16.72px);
-    height: 50px;
-    background-color: transparent;
-    border: none;
-    font-size: 18px;
-    color: #4884a0;
-    cursor: pointer;
-    padding: 0;
-    transition: left 1s ease-out;
-}
-
-#searchIcon:active {
-    left: 0;
-}
-
-#search {
-    border: none;
-    font-size: 20px;
-    padding-left: 20px;
-}
-
-#search:focus {
-    outline: none;
-}
-
-.wrapper > header > nav > section {
+#mainBar > section {
     flex: 1 1;
 }
 
@@ -226,41 +190,101 @@ time, mark, audio, video {
     outline: none;
 }
 
-#searchBox {
-    font-size: 18px;
-    float: right;
-    border: none;
-    width: 200px;
+/*--------------------------------------------------------------------------------------*/
+/*-----------------------------------------Search---------------------------------------*/
+/*--------------------------------------------------------------------------------------*/
+
+#searchShade {
+    position: absolute;
+    top: 50px;
+    height: calc(100vh - 50px);
+    width: 100vw;
+    background-color: rgba(0, 0, 0, .3);
+    z-index: 3;
+}
+
+#searchHead {
+    position: absolute;
+    top: -50px;
+    width: 100vw;
+    height: 50px;
+    font-family: "Droid Sans", sans-serif;
+    transition: top .25s ease-out;
+}
+
+#searchHead.enter {
+    top: 0;
+}
+
+#searchBar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    padding: 0 0 0 20px;
+    margin: 0 auto;
+    background-color: white;
+
+}
+
+#searchIcon {
+    left: calc(100% - 16.72px);
     background-color: transparent;
-    padding-left: 5px;
+    border: none;
+    font-size: 18px;
     color: #4884a0;
+    cursor: text;
+    padding: 0;
 }
 
-#searchBox::-webkit-input-placeholder {
-    color: #8bb5d1;
+#searchIcon:active {
+    left: 0;
 }
 
-#searchBox:-moz-placeholder { /* Firefox 18- */
-    color: #417992;
+#search {
+    border: none;
+    font-size: 20px;
+    height: 48px;
+    width: 100%;
+    padding-left: 20px;
+    color: #24545e;
+    -webkit-transition: width 1s;
+    -moz-transition: width 1s;
+    -ms-transition: width 1s;
+    -o-transition: width 1s;
+    transition: width 1s;
 }
 
-#searchBox::-moz-placeholder {  /* Firefox 19+ */
-    color: #417992;
+#search:focus {
+    outline: none;
+    width: 100vw;
 }
 
-#searchBox:-ms-input-placeholder {
-    color: #417992;
+#closeSearch {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    padding-top: 0;
+    background-color: white;
+    border: none;
+    font-size: 40px;
+    color: #4884a0;
+    cursor: pointer;
+    font-weight: 300;
 }
 
-#searchBox:focus {
+#closeSearch:focus {
     outline: none;
 }
+
 
 /*--------------------------------------------------------------------------------------*/
 /*-----------------------------------------Sidebar--------------------------------------*/
 /*--------------------------------------------------------------------------------------*/
 
-#shade {
+#sideShade {
     position: absolute;
     background-color: rgba(0, 0, 0, .3);
     width: 100vw;
