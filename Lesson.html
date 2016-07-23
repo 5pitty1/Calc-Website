@@ -41,47 +41,8 @@
                     <a id="calcVision" href="#"><span style="font-weight: bold">Calc</span>Vision</a>
                 </section>
                 <section>
-                    <div class="dropdown" id="topics">
+                    <div id="topics">
                         <button id="topicsBtn" onclick="showTopics()">Topics <i class="fa fa-angle-down fa-lg" aria-hidden="true"></i></button>
-                        <div id="topicsContainer">
-                            <ul>
-                                <li id="differentialCalc">
-                                    <header>Differential Calculus</header>
-                                    <ul>
-                                        <li><a href="#">Functions and Models</a></li>
-                                        <li><a href="#">Limits and Derivatives</a></li>
-                                        <li><a href="#">Differentiation Rules</a></li>
-                                        <li><a href="#">Applications of Differentiation</a></li>
-                                        <li><a href="#">Integrals</a></li>
-                                        <li><a href="#">Applications of Integration</a></li>
-                                        <li><a href="#">Derivatives and Limits Review</a></li>
-                                    </ul>
-                                </li>
-                                <li id="integralCalc">
-                                    <header>Integral Calculus</header>
-                                    <ul>
-                                        <li><a href="#">Techniques of Integration</a></li>
-                                        <li><a href="#">Further Applications of Integration</a></li>
-                                        <li><a href="#">Differential Equations</a></li>
-                                        <li><a href="#">Parametric Equations and Polar Coordinates</a></li>
-                                        <li><a href="#">Infinite Sequence and Series</a></li>
-                                        <li><a href="#"></a></li>
-                                    </ul>
-                                </li>
-                                <li id="multivariableCalc">
-                                    <header>Multivariable Calculus</header>
-                                    <ul>
-                                        <li><a href="#">Vectors and the Geometry of Space</a></li>
-                                        <li><a href="#">Vector Functions</a></li>
-                                        <li><a href="#">Partial Derivatives</a></li>
-                                        <li><a href="#">Multiple Integrals</a></li>
-                                        <li><a href="#">Vector Calculus</a></li>
-                                        <li><a href="#">Second-Order Differential Equations</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-
                     </div>
                 </section>
                 <section>
@@ -92,6 +53,44 @@
             </nav>
         </div>
     </header>
+    <div id="topicsContainer">
+        <ul>
+            <li id="differentialCalc" class="notReady">
+                <header class="ready">Differential Calculus</header>
+                <ul>
+                    <li><a href="#" class="ready">Functions and Models</a></li>
+                    <li><a>Limits and Derivatives</a></li>
+                    <li><a>Differentiation Rules</a></li>
+                    <li><a>Applications of Differentiation</a></li>
+                    <li><a>Integrals</a></li>
+                    <li><a>Applications of Integration</a></li>
+                    <li><a>Derivatives and Limits Review</a></li>
+                </ul>
+            </li>
+            <li id="integralCalc" class="notReady">
+                <header>Integral Calculus - Coming Soon</header>
+                <ul>
+                    <li><a>Techniques of Integration</a></li>
+                    <li><a>Further Applications of Integration</a></li>
+                    <li><a>Differential Equations</a></li>
+                    <li><a>Parametric Equations and Polar Coordinates</a></li>
+                    <li><a>Infinite Sequence and Series</a></li>
+                    <li><a></a></li>
+                </ul>
+            </li>
+            <li id="multivariableCalc" class="notReady">
+                <header>Multivariable Calculus - Coming Soon</header>
+                <ul>
+                    <li><a>Vectors and the Geometry of Space</a></li>
+                    <li><a>Vector Functions</a></li>
+                    <li><a>Partial Derivatives</a></li>
+                    <li><a>Multiple Integrals</a></li>
+                    <li><a>Vector Calculus</a></li>
+                    <li><a>Second-Order Differential Equations</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
     <div id="container">
         <div id="sideShade" hidden></div>
         <div id="sideBar" hidden>
@@ -174,6 +173,7 @@
                     <a>References</a>
                     <a>Glossary</a>
                     <a>Proofs</a>
+                    <div id="defineBox"><input id="define" type="text" placeholder="Define"></div>
                 </div>
             </div>
         </section>

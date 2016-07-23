@@ -59,6 +59,8 @@ $(document).ready(function () {
         }, 250);
     });
 
+
+
 });
 
 function showTopics() {
@@ -66,7 +68,7 @@ function showTopics() {
 }
 
 window.onclick = function(event) {
-    if (!event.target.matches('#topics, #topics *')) {
+    if (!event.target.matches('#topics, #topics *, #topicsContainer, #topicsContainer *')) {
         var dropdown = document.getElementById("topicsContainer");
         if (dropdown.classList.contains('show')) {
             dropdown.classList.remove('show');
