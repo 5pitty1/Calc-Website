@@ -59,7 +59,27 @@ $(document).ready(function () {
         }, 250);
     });
 
+    $(document).keyup(function(e) {
+        if (e.keyCode === 27) {
+            //Search Bar
+            $("#searchHead").removeClass("enter");
+            $("#searchShade").fadeOut(500);
+            $("#mainHead").removeClass("leave");
+            setTimeout(function() {
+                $("#search").val("");
+            }, 250);
 
+            //Topics
+            $("#topicsContainer").removeClass("show");
+
+            //Resources
+            $("#resContainer").removeClass("show");
+
+            //Sidebar
+            $("#sideBar").hide("slide", 250);
+            $("#sideShade").fadeOut(250);
+        }
+    });
 
 });
 
@@ -81,3 +101,31 @@ window.onclick = function(event) {
         }
     }
 };
+
+
+function setCookie ( cookie_name, cookie_value, lifespan_in_days, valid_domain )
+{
+    var domain_string = valid_domain ? ("; domain=" + valid_domain) : '' ;
+    document.cookie = cookie_name + "=" + encodeURIComponent( cookie_value ) +
+    "; max-age=" + 60 * 60 * 24 * lifespan_in_days +
+    "; path=/" + domain_string +
+    "; secure";
+}
+
+function getCookie(name){
+    var c = document.cookie.split("; ");
+    var cookies = {};
+
+    for(var i = c.length-1; i>0; i--){
+        var C = c[i].split('=');
+        cookies[C[0]] = C[1];
+    }
+
+    return cookies[name];
+}
+
+function deleteCookie ( cookie_name, valid_domain )
+{
+    var domain_string = valid_domain ? ("; domain=" + valid_domain) : '' ;
+    document.cookie = cookie_name + "=; max-age=0; path=/" + domain_string ;
+}
