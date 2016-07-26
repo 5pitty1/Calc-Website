@@ -1,0 +1,9 @@
+Design Todo:
+    Make search results
+    Design the resources dropdown
+    Make a definition popup whenever you click on a defined word
+    Make an in-lesson definition area
+
+Content Todo:
+    Add the ability to make graphs
+    Add the ability to make tables

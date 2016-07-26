@@ -219,7 +219,7 @@ a.ready:hover {
     height: calc(100vh - 50px);
     width: 100vw;
     background-color: rgba(0, 0, 0, .3);
-    z-index: 3;
+    z-index: 6;
 }
 
 #searchHead {
@@ -393,17 +393,6 @@ a.ready:hover {
     padding: 0 10vw;
 }
 
-#left {
-    background-color: #f8f8f8;
-    position: absolute;
-    top: 51px;
-    left: 0;
-    bottom: 49px;
-    right: 70%;
-    z-index: 1;
-
-}
-
 #resizeBar {
     position: absolute;
     width: 8px;
@@ -422,6 +411,28 @@ a.ready:hover {
     margin: 0 auto;
 }
 
+/*--------------------------------------------------------------------------------------*/
+/*---------------------------------------Left Side--------------------------------------*/
+/*--------------------------------------------------------------------------------------*/
+
+#left {
+    background-color: #f8f8f8;
+    position: absolute;
+    top: 51px;
+    left: 0;
+    bottom: 49px;
+    right: 70%;
+    z-index: 1;
+}
+
+#leftContent {
+    padding: 20px;
+}
+
+/*--------------------------------------------------------------------------------------*/
+/*---------------------------------------Right Side-------------------------------------*/
+/*--------------------------------------------------------------------------------------*/
+
 #right {
     background-color: white;
     position: absolute;
@@ -430,7 +441,32 @@ a.ready:hover {
     bottom: 49px;
     right: 0;
     z-index: 1;
+}
 
+/*--------------------------------------------------------------------------------------*/
+/*----------------------------------In-Lesson Definition--------------------------------*/
+/*--------------------------------------------------------------------------------------*/
+
+.defBox {
+    display: block;
+    border: 3px double #81b8c7;
+    border-left: none;
+    border-right: none;
+    margin: 10px auto;
+    padding: 5px;
+    width: inherit;
+    font-style: italic;
+    
+}
+
+.defTitle {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #70a0ad;
+}
+
+.definition {
+    color: #618b96;
 }
 
 /*--------------------------------------------------------------------------------------*/
